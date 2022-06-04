@@ -1,5 +1,5 @@
 # Angular 14 Demo Project
-Angular demo project based on the lectures from: https://www.udemy.com/course/the-complete-guide-to-angular-2/
+Angular demo project based on the lectures from: https://www.udemy.com/course/the-complete-guide-to-angular-2/ (2022 ed.)
 
 Tech stack:
 - Angular CLI: 14.0.0
