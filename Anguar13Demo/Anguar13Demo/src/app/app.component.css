@@ -1,0 +1,8 @@
+h1 {
+  color: darkred;
+}
+
+h1 img {
+  max-width: 7%;
+  height: auto;
+}
