@@ -2,4 +2,43 @@
   <li><app-server></app-server></li>
   <li><app-server></app-server></li>
 </ul>
+<hr />
+<div class="row">
+  <div class="col">
+    <input type="text" class="form-control"
+           (input)="onUpdateServerName($event)" />
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-primary"
+            [disabled]="!allowNewServer"
+            (click)="onCreateServer()">
+      Add server
+    </button>
+  </div>
+</div>
+<div class="row">
+  <p>{{serverCreationStatus}}</p>
+</div>
+<hr /><hr />
+
+<div class="row">
+  <div class="col">
+    <label>Data binding</label>
+    <input type="text" class="form-control"
+           (input)="onUpdateServerName($event)" />
+  </div>
+  <div class="col">
+    <label>Two ways - data binding</label>
+    <input type="text"
+           class="form-control"
+           [(ngModel)]="serverName" />
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>{{serverName}}</p>
+  </div>
+</div>
 
