@@ -1,8 +1,3 @@
-<ul>
-  <li><app-server></app-server></li>
-  <li><app-server></app-server></li>
-</ul>
-<hr />
 <div class="row">
   <div class="col">
     <input type="text" class="form-control"
@@ -19,9 +14,18 @@
   </div>
 </div>
 <div class="row">
-  <p>{{serverCreationStatus}}</p>
+  <p *ngIf="serverCreated; else noServer">Server was created as {{serverName}}</p>
+  <ng-template #noServer>
+    <p>{{serverCreationStatus}}</p>
+  </ng-template>
 </div>
-<hr /><hr />
+<div class="row">
+  <ul>
+    <li><app-server *ngFor="let server of servers"></app-server></li>
+  </ul>
+</div>
+<hr />
+<hr />
 
 <div class="row">
   <div class="col">
